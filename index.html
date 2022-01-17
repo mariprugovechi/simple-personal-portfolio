@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Mari Prugovechi</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a target="_blank" href="https://github.com/mariprugovechi">GitHub</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.linkedin.com/in/marianna-prugovechi/">Linkedin</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.instagram.com/mariprugovechi/">Instagram</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <header>
+                <h1>Mari Prugovechi</h1>
+                <span>Front-End Developer</span>
+            </header>
+            <article onclick="displayAbout()" class="arrow">
+                <i id="animation" class="fas fa-plus-circle"></i>
+            </article>
+            <div style="display: none" id="about">
+                <p>
+                    Atualmente estudando Sistemas para Internet com o objetivo de entrar na área de TI e com um foco inicial
+em desenvolvimento front-end. Possuo conhecimentos em HTML, CSS, JavaScript, React e User Experience.
+                </p>
+            </div>
+            <div class="form">
+                <div>
+                    <p>
+                        Deixe seu contato:
+                    </p>
+                </div>
+                <form action="">
+                    <input type="email" placeholder="Seu melhor email!" required>
+                    <button type="submit" onsubmit="">Enviar</button>
+                </form>               
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function displayAbout() {
+            var arrow = document.getElementById('animation')
+            arrow.classList.toggle('rotate');
+            document.getElementById("animation").classList.remove('fa-plus-circle');
+            document.getElementById("animation").classList.add('fa-minus-circle');
+            var display = document.getElementById('about')
+            display.classList.toggle('active');
+
+            var displayValue = document.getElementById("about").className;
+            console.log(displayValue);
+
+            if (displayValue != 'active') {  
+                document.getElementById("animation").classList.remove('fa-minus-circle');
+                document.getElementById("animation").classList.add('fa-plus-circle');
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
